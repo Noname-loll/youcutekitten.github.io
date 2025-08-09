@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Персональные билетики</title>
+  <!-- Иконка сайта (favicon) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎫</text></svg>">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f1ff;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      color: #5e35b1;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .tickets-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .ticket {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .ticket:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .ticket::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #7e57c2, #5e35b1);
+    }
+    .ticket h2 {
+      margin: 5px 0;
+      color: #5e35b1;
+      font-size: 24px;
+    }
+    .ticket .feature {
+      margin: 5px 0 10px;
+      color: #7e57c2;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .ticket img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #f3e5ff;
+      margin-bottom: 15px;
+    }
+    .ticket .size {
+      font-style: italic;
+      color: #757575;
+      margin: 10px 0;
+      padding: 5px;
+      background: #f5f5f5;
+      border-radius: 5px;
+    }
+    .ticket .date {
+      color: #9e9e9e;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    audio {
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 20px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .website {
+      margin-top: 15px;
+      color: #7e57c2;
+      font-style: italic;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎫 Персональные билетики 🎫</h1>
+  
+  <div class="tickets-container">
+    <!-- Билетик Katya -->
+    <div class="ticket">
+      <h2>Katya</h2>
+      <p class="feature">99% evil little ball</p>
+      <img src="black.jpg" alt="Чёрный котик Katya">
+      <p class="size">AFTG hyperfixation size: XXXL</p>
+      <audio controls src="KU.mp3">
+        Ваш браузер не поддерживает аудио.
+      </audio>
+      <p class="date">03.10.2007</p>
+      <p class="website">www.youcutekitten.com</p>
+    </div>
+    
+    <!-- Билетик Dasha -->
+    <div class="ticket">
+      <h2>Dasha</h2>
+      <p class="feature">100% traveling</p>
+      <img src="q.jpg" alt="Серый котик Dasha">
+      <p class="size">Work aversion size: XXL</p>
+      <audio controls src="with you - mood.mp3">
+        Ваш браузер не поддерживает аудио.
+      </audio>
+      <p class="date">22.11.2006</p>
+      <p class="website">www.youcutekitten.com</p>
+    </div>
+    
+    <!-- Билетик Tanya -->
+    <div class="ticket">
+      <h2>Tanya</h2>
+      <p class="feature">100% wandering</p>
+      <img src="yellow.jpg" alt="Рыжий котик Tanya">
+      <p class="size">Intellectual dumbness size: XXS</p>
+      <audio controls src="Покойник.mp3">
+        Ваш браузер не поддерживает аудио.
+      </audio>
+      <p class="date">04.08.2007</p>
+      <p class="website">www.youcutekitten.com</p>
+    </div>
+  </div>
+</body>
+</html>
